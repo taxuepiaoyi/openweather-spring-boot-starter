@@ -14,7 +14,7 @@ public class OpenWeatherService {
         this.baseUrl = baseUrl;
     }
 
-    public String getWeather(String city) {
+    public String getWeather(String city) throws Exception{
         try {
             WeatherResponseDTO response = fetchWeatherFromApi(city).block();
             if (response == null) {
